@@ -39,6 +39,11 @@
     Series: <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a>
   </p>
   {{ end }}
+  {{ if.Params.warnings }}
+  <p class="contentwarnings">
+    Content Warnings: {{ .Params.warnings }}
+  </p>
+  {{ end }}
 
   {{ if .Params.featuredImage }}
   <p>
