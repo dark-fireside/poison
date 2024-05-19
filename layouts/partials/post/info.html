@@ -34,16 +34,17 @@
   </div>
 
   {{ $Site := .Site }}
+  <p class="poststats seriesname">
   {{ if .Params.series }}
-  <p class="seriesname">
-    Series: <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a>
-  </p>
+    Series: <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a><br>
   {{ end }}
   {{ if.Params.warnings }}
-  <p class="contentwarnings">
-    Content Warnings: {{ .Params.warnings }}
-  </p>
+    Content Warnings: {{ .Params.warnings }}<br>
   {{ end }}
+  {{ if.Params.author }}
+    Author: {{ .Params.author }}<br>
+  {{ end }}
+  </p>
 
   {{ if .Params.featuredImage }}
   <p>
