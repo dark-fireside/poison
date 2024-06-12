@@ -36,13 +36,16 @@
   {{ $Site := .Site }}
   <p class="poststats seriesname">
   {{ if .Params.series }}
-    Series: <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a><br>
+  series: <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a>
+    {{ if .Params.number }} {{ .Params.number}}
+    {{ end }}
+    <br>
   {{ end }}
   {{ if.Params.warnings }}
-    Content Warnings: {{ .Params.warnings }}<br>
+    content warnings: {{ .Params.warnings }}<br>
   {{ end }}
   {{ if.Params.author }}
-    Author: {{ .Params.author }}<br>
+    author: {{ .Params.author }}<br>
   {{ end }}
   </p>
 
