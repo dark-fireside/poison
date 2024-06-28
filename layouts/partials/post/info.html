@@ -36,9 +36,9 @@
   {{ $Site := .Site }}
   <p class="poststats seriesname">
   {{ if .Params.series }}
-  series: <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a>
-    {{ if .Params.number }} {{ .Params.number}}
+   series: {{ if .Params.number }} {{ .Params.number}} in 
     {{ end }}
+    <a href="{{ $Site.BaseURL }}series/{{ .Params.series | urlize }}">{{ .Params.series }}</a>
     <br>
   {{ end }}
   {{ if.Params.warnings }}
