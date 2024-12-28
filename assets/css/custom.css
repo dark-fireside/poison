@@ -1,26 +1,26 @@
 /* Empty css file that users can override in their own /assets/css/custom.css file */
-p.h {
+.h {
   color: #6e9971;
   padding-left: 20px
 }
 
-p.h::before {
+.h::before {
   content: "."
 }
 
-p.robin {
+.robin {
   color: #3b5ddb;
 }
 
-p.robin::before {
+.robin::before {
   content: "."
 }
 
-p.sath {
+.sath {
   color: #AD6666;
   padding-left: 40px
 }
 
-p.sath::before {
+.sath::before {
   content: "."
 }
