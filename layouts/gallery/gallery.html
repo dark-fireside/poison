@@ -6,8 +6,11 @@
     {{ with .Site.GetPage "/gallery" }}
         {{ if .Pages }}
             {{ range .Pages.GroupByDate "January 2006"  }}
-                <h1 class="post-title">{{ .Title }}</h1>
-                <div class=gallery>{{ .Content }}</div>
+                <h3 style="text-align: center;">{{ .Key }}</h3>
+                    {{range .Pages}}
+                        <h1 class="post-title">{{ .Title }}</h1>
+                        <div class=gallery>{{ .Content }}</div>
+                    {{ end }}
             {{ end }}
         {{ else }}
             <h1 class="post-title">{{ .Title }}</h1>
