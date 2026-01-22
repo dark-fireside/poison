@@ -1,7 +1,9 @@
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  img {
-    flex: 33.3%
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      flex: 33.3%
+    }
   }
 }
