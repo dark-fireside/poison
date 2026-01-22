@@ -5,7 +5,7 @@
 <div class="post">
     {{ with .Site.GetPage "/gallery" }}
         {{ if .Pages }}
-            {{ range .Pages }}
+            {{ range .Pages.GroupByDate "January 2006"  }}
                 <h1 class="post-title">{{ .Title }}</h1>
                 <div class=gallery>{{ .Content }}</div>
             {{ end }}
