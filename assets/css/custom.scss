@@ -1,13 +1,12 @@
-.gallery {
-  p {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; // Optional: adds spacing between images
-    img {
-      flex: 1 1 calc(33.333% - 10px); // flex-grow, flex-shrink, flex-basis
-      max-width: calc(33.333% - 10px);
-      height: auto;
-      object-fit: cover; // Optional: ensures images display nicely
-    }
-  }
+.gallery p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery p img {
+  flex: 1 1 calc(33.333% - 10px);
+  max-width: calc(33.333% - 10px);
+  height: auto;
+  object-fit: cover;
 }
