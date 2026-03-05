@@ -2,7 +2,7 @@
   columns: 3;
   list-style-type: none;
   padding: 0;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
 }
 
 .sidebar-badges li {
@@ -15,4 +15,6 @@
   padding: 0;
   margin: 0;
   border-radius: 0;
+  width: 88px;
+  height: 31px;
 }

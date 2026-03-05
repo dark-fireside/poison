@@ -1,8 +1,12 @@
 <div class="sidebar-badges">
   <ul>
     {{ range .Site.Params.badges }}
-    {{ $badge := .}}
-      <li><a href="{{ $badge.LinkURL }}"><img src="{{ $badge.ImageURL }}"></a></li>
+      {{ $badge := .}}
+      {{ if not $badge.IsNotLink }}
+        <li><a href="{{ $badge.LinkURL }}"><img src="{{ $badge.ImageURL }}"></a></li>
+      {{ else }}
+        <li><img src="{{ $badge.ImageURL }}"></li>
+      {{end}}
     {{end}}
   </ul>
 </div>
