@@ -20,6 +20,20 @@
       {{ end }}
     </ul>
   {{ end }}
+  <h3 class="title" style="text-align: center;">Misc</h2>
+  {{ $allStories := where site.RegularPages "Section" "stories" }}
+  <ul class="entries">
+  {{ range where $allStories "Params.series" "eq" nil }}
+    <li>
+        <span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </span>
+        <span class="published">
+            <time class="pull-right post-list">{{ .Date | time.Format ":date_long" }}</time>
+        </span>
+    </li>
+  {{ end }}
+  </ul>
 
 {{ end }}
 
