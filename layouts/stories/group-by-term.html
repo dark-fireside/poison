@@ -1,0 +1,25 @@
+{{ define "main" -}}
+  <h1 class="title">{{ .Title }}</h1>
+  {{ .Content }}
+  
+  {{ range sort site.Taxonomies.series .Data.Taxonomies.Alphabetical "desc" }}
+    {{ $filteredPages := where .Pages.ByWeight "Section" "stories"}}
+    {{ if $filteredPages }}
+      <h3 class="title" style="text-align: center;"><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></h2>
+    {{ end }}
+    <ul class="entries">
+      {{ range $filteredPages }}
+            <li>
+                <span>
+                {{ .Params.number }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </span>
+                <span class="published">
+                    <time class="pull-right post-list">{{ .Date | time.Format ":date_long" }}</time>
+                </span>
+            </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+{{ end }}
+
