@@ -72,6 +72,7 @@ pre {
     width: 18rem;
     text-align: left;
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: rgb(70, 70, 70) auto;
   }
